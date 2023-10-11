@@ -7,7 +7,7 @@ CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 
 @app.route('/')
-def getGeneral(nb):
+def getGeneral():
     return jsonify({'message': "Tremendo cumbiote papi"})
     
 
