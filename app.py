@@ -6,6 +6,11 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 
+@app.route('/')
+def getGeneral(nb):
+    return jsonify({'message': "Tremendo cumbiote papi"})
+    
+
 @app.route('/podcast-text/<nb>')
 def getPodcastText(nb):
     with open('./static/strings.json', 'r') as archivo:
